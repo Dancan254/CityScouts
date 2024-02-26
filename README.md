@@ -6,7 +6,7 @@ This README provides an overview of the application, its features, and how to ge
 
 ## Features
 
-- Company Management**: Create, update, and delete company profiles.
+- Company Management: Create, update, and delete company profiles.
 - Job Listings: Post job listings with details such as job title, description, and requirements.
 - Review System: Allow users to submit reviews for companies, providing feedback and ratings.
 
