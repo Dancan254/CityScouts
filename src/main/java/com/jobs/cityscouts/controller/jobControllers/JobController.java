@@ -47,7 +47,7 @@ public class JobController {
             return new ResponseEntity<>("Job successfully updated", HttpStatus.OK);
         }
         else{
-            return new ResponseEntity<>("Failed to update, Ensure you have passed the right id",HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Failed to update, Ensure you have passed the right id and fields",HttpStatus.NOT_FOUND);
         }
     }
 
