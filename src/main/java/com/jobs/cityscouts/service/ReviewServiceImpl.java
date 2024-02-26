@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 @Service
 public class ReviewServiceImpl implements ReviewService{
     @Autowired
@@ -28,5 +27,13 @@ public class ReviewServiceImpl implements ReviewService{
             return true;
         }
         return false;
+    }
+    @Override
+    public Review getReviewById(Long companyId, Long reviewId) {
+        List<Review> reviews = reviewRepository.findByCompanyId(companyId);
+        return reviews.stream()
+                        .filter(review -> review.getId().equals(reviewId))
+                        .findFirst()
+                        .orElse(null);
     }
 }
