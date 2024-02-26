@@ -1,8 +1,6 @@
 package com.jobs.cityscouts.controller.companyController;
 
 import com.jobs.cityscouts.entity.companyEntity.Company;
-import com.jobs.cityscouts.entity.jobEntity.Job;
-import com.jobs.cityscouts.exception.JobNotFoundException;
 import com.jobs.cityscouts.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
