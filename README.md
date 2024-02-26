@@ -1,4 +1,4 @@
-```markdown
+
 # CityScouts Backend Application
 Welcome to CityScouts, a backend application built using Java Spring Boot. CityScouts serves as a platform for companies:
 to manage their company information, job listings, and reviews.
