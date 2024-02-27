@@ -5,7 +5,6 @@ import com.jobs.cityscouts.entity.companyEntity.Company;
 import com.jobs.cityscouts.repository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 @Service
 public class ReviewServiceImpl implements ReviewService{
