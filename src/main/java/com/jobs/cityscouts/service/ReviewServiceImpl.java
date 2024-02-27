@@ -35,4 +35,20 @@ public class ReviewServiceImpl implements ReviewService{
                         .findFirst()
                         .orElse(null);
     }
+
+    @Override
+    public boolean deleteReview(Long companyId, Long reviewId) {
+        if(companyService.findCompanyById(companyId) != null &&
+                reviewRepository.existsById(reviewId)){
+            Review review = reviewRepository.findById(reviewId).orElse(null);
+            Company company = review.getCompany();
+            company.getReviewList().remove(review);
+            review.setCompany(null);
+            companyService.updateCompanyDetails(companyId, company);
+            reviewRepository.deleteById(reviewId);
+            return true;
+        }else {
+            return false;
+        }
+    }
 }
