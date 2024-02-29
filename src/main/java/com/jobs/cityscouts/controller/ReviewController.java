@@ -42,6 +42,6 @@ public class ReviewController {
         if (isReviewDeleted)
             return new ResponseEntity<>("Successfully deleted the review", HttpStatus.CREATED);
         else
-            return new ResponseEntity<>("Failed", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Failed to delete review", HttpStatus.NOT_FOUND);
     }
 }
