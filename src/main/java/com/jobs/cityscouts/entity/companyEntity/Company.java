@@ -20,8 +20,6 @@ public class Company {
     private Long id;
     private String name;
     private String companyDescription;
-    private String location;
-
     @JsonIgnore
     @OneToMany(mappedBy = "company")
     private List<Job> jobList;

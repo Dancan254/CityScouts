@@ -30,7 +30,6 @@ public class Job {
 
     private LocalDateTime editedAt;
 
-    @JsonIgnore
     @ManyToOne
     private Company company;
     }
