@@ -48,9 +48,13 @@ public class CompanyServiceImpl implements CompanyService{
 
     @Override
     public boolean deleteJob(Long id) {
-        if(companyRepository.existsById(id)){
-            companyRepository.deleteById(id);
-            return true;
+        try {
+            if (companyRepository.existsById(id)) {
+                companyRepository.deleteById(id);
+                return true;
+            }
+        }catch(Exception e){
+                e.printStackTrace();
         }
         return false;
     }
