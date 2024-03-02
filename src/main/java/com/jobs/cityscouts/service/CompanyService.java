@@ -12,4 +12,6 @@ public interface CompanyService {
     void updateCompanyDetails(Long id, Company company);
 
     Company findCompanyById(Long id);
+
+    boolean deleteJob(Long id);
 }
