@@ -25,7 +25,7 @@ public class CompanyController {
             Company company = companyService.findCompanyById(id);
             return ResponseEntity.ok(company);
         } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
         }
     }
     @PostMapping("/create")
