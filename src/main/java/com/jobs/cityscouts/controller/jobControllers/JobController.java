@@ -3,7 +3,6 @@ package com.jobs.cityscouts.controller.jobControllers;
 import com.jobs.cityscouts.entity.jobEntity.Job;
 import com.jobs.cityscouts.exception.JobNotFoundException;
 import com.jobs.cityscouts.service.JobServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,8 +12,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/jobs")
 public class JobController {
-    @Autowired
-    JobServiceImpl jobService;
+
+    private final JobServiceImpl jobService;
+
+    public JobController(JobServiceImpl jobService) {
+        this.jobService = jobService;
+    }
+
     //LIST JOBS
     @GetMapping("/All")
     public ResponseEntity<List<Job>> findAllJobs(){
