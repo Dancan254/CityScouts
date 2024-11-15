@@ -4,7 +4,6 @@ import com.jobs.cityscouts.entity.jobEntity.Job;
 import com.jobs.cityscouts.exception.JobNotFoundException;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface JobService {
     List<Job> findAllJobs();
