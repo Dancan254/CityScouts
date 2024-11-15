@@ -1,22 +1,24 @@
 package com.jobs.cityscouts.service;
 
-import com.jobs.cityscouts.entity.jobEntity.Job;
-import com.jobs.cityscouts.exception.JobNotFoundException;
-import com.jobs.cityscouts.repository.JobRepository;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import com.jobs.cityscouts.entity.jobEntity.Job;
+import com.jobs.cityscouts.exception.JobNotFoundException;
+import com.jobs.cityscouts.repository.JobRepository;
 
 @Service
 public class JobServiceImpl implements JobService{
 
     @Autowired
     JobRepository jobRepository;
+
+    @Override
     public List<Job> findAllJobs() {
         return jobRepository.findAll();
     }
